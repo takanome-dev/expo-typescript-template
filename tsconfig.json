@@ -1,0 +1,29 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "~*": ["src/*"],
+      "~assets": ["assets"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    // sets types for project using src/types folder
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "jsx": "react-native",
+    "lib": ["es6", "dom", "esnext"],
+    "target": "esnext",
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    ".eslint.config.js",
+    "node_modules",
+    "**/*.spec.ts",
+    "dist"
+  ]
+}
