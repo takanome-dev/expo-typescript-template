@@ -13098,10 +13098,10 @@ react-native-gradle-plugin@^0.71.17:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.17.tgz#cf780a27270f0a32dca8184eff91555d7627dd00"
   integrity sha512-OXXYgpISEqERwjSlaCiaQY6cTY5CH6j73gdkWpK0hedxtiWMWgH+i5TOi4hIGYitm9kQBeyDu+wim9fA8ROFJA==
 
-react-native-notificated@^0.0.1-beta.0:
-  version "0.0.1-beta.0"
-  resolved "https://registry.yarnpkg.com/react-native-notificated/-/react-native-notificated-0.0.1-beta.0.tgz#371de87b3cba7fccc15cb154ba99d01730f2ae89"
-  integrity sha512-6cwVMUWOiW9d7TY+rd9/GfEZrkvUQ3o3zEc1rwlmAPV5tajp7CKEwT8OLRP74w1QY4cUwNP+mxQID9yQXtA8Sw==
+react-native-notificated@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-notificated/-/react-native-notificated-0.1.0.tgz#333d3eb3a2cada3e5a8ea36a0258202258532662"
+  integrity sha512-U39KxPhZqZHXodtOqpJSYeWFiyrrxWDaahrQ6+ItKhviW2BUb8x53H0KnEz0AsUT1Wlm5Q1RRhmmyfjr1rkQQA==
 
 react-native-pager-view@5.4.25:
   version "5.4.25"
