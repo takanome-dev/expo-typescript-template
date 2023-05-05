@@ -120,7 +120,7 @@
     "@types/react-i18next": "^8.1.0",
     "@types/react-native": "~0.71.0",
     "@types/react-query": "^1.2.9",
-    "@types/react-test-renderer": "^17.0.2",
+    "@types/react-test-renderer": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
     "@welldone-software/why-did-you-render": "^7.0.1",
