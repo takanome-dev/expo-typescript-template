@@ -136,7 +136,7 @@
     "eslint-plugin-react-native-globals": "^0.1.2",
     "husky": "^8.0.1",
     "jest-expo": "^46.0.0",
-    "lint-staged": "^12.4.1",
+    "lint-staged": "^13.0.0",
     "miragejs": "^0.1.44",
     "prettier": "^2.6.2",
     "pretty-quick": "^3.1.3",
