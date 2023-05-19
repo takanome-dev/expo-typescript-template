@@ -1,29 +1,27 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "~*": ["src/*"],
-      "~assets": ["assets"]
+      "~/assets/*": ["./assets/*"],
+      "~/src/*": ["./src/*"],
+      "~/theme/*": ["./src/theme/*"],
+      "~/components/*": ["./src/components/*"],
+      "~/navigation/*": ["./src/navigation/*"],
+      "~/screens/*": ["./src/screens/*"],
+      "~/slices/*": ["src/redux/slices/*"],
+      "~/utils/*": ["./src/utils/*"]
     },
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    // sets types for project using src/types folder
-    "typeRoots": ["node_modules/@types", "src/types"],
-    "jsx": "react-native",
-    "lib": ["es6", "dom", "esnext"],
-    "target": "esnext",
-    "skipLibCheck": true
+    "lib": ["esnext", "dom"],
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": false,
+    "isolatedModules": true,
+    "module": "esnext",
+    "strict": true,
+    "removeComments": true,
+    "incremental": true,
+    "noUncheckedIndexedAccess": true
   },
-  "exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js",
-    "jest.config.js",
-    ".eslint.config.js",
-    "node_modules",
-    "**/*.spec.ts",
-    "dist"
-  ]
+  "include": ["./src/**/*", "**/*.ts", "**/*.tsx"]
 }

@@ -4,7 +4,6 @@
     "slug": "expo-typescript-template",
     "scheme": "template",
     "version": "1.0.0",
-    "owner": "binarapps",
     "userInterfaceStyle": "automatic",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,7 +19,7 @@
     "ios": {
       "supportsTablet": true,
       "jsEngine": "hermes",
-      "bundleIdentifier": "com.binarapps.template.dev"
+      "bundleIdentifier": "com.template.dev"
     },
     "android": {
       "adaptiveIcon": {

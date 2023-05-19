@@ -1,60 +1,51 @@
-// duplicated import of gesture handler is required for bottom sheet modal to work on android
-/* eslint-disable import/no-duplicates */
-// FIXME: see how why did you render works
-// import './wdyr'
-import 'react-native-gesture-handler'
-import 'react-native-reanimated'
-import '~i18n'
+import * as SplashScreen from 'expo-splash-screen'
+import { StatusBar } from 'expo-status-bar'
+import React, { useState, useEffect } from 'react'
+import { View } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { Provider } from 'react-redux'
 
-import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
-import { registerRootComponent } from 'expo'
-import { StyleSheet } from 'react-native'
-import { GestureHandlerRootView } from 'react-native-gesture-handler'
-import { QueryClientProvider, QueryClient } from 'react-query'
+import Navigator from '~/navigation/navigator'
+import Splash from '~/src/components/splash'
+import colors from '~/src/theme/colors'
+import { fontAssets } from '~/theme/fonts'
+// import { imageAssets } from '~/theme/images'
+import store from '~/src/redux/root'
+import '~/utils/ignore'
 
-import { AppLoading } from '~components'
-import { theme, nativeBaseConfig } from '~constants'
-import { Navigation } from '~navigation'
-import { AuthProvider, NotificationsProvider, NativeBaseProvider } from '~providers'
-import { startMockedServer, colorModeManager } from '~services'
+SplashScreen.preventAutoHideAsync()
 
-// FIXME: there is some issue with miragejs that causes console.log to not work
-const DISABLE_CONSOLE_ENABLE_MOCKED_SERVER = false
+const App = () => {
+  const [appIsReady, setAppIsReady] = useState(false)
 
-if (DISABLE_CONSOLE_ENABLE_MOCKED_SERVER) {
-  startMockedServer()
-}
+  const handleLoadAssets = async () => {
+    try {
+      // await Promise.all([...imageAssets, ...fontAssets])
+      await Promise.all([...fontAssets])
+    } catch (e) {
+      console.warn(e)
+    } finally {
+      setAppIsReady(true)
+      await SplashScreen.hideAsync()
+    }
+  }
 
-const queryClient = new QueryClient({})
+  useEffect(() => {
+    handleLoadAssets()
+  }, [])
 
-const App = (): JSX.Element => {
+  if (!appIsReady) return <Splash />
+
   return (
-    <NativeBaseProvider theme={theme} colorModeManager={colorModeManager} config={nativeBaseConfig}>
-      {/* NativeBaseProvider includes SafeAreaProvider so that we don't have to include it in a root render tree */}
-      {/* @ts-expect-error: error comes from a react-native-notificated library which doesn't have declared children in types required in react 18 */}
-      <NotificationsProvider>
-        <QueryClientProvider client={queryClient}>
-          <AuthProvider>
-            <AppLoading>
-              <GestureHandlerRootView style={styles.gestureHandlerRootView}>
-                <BottomSheetModalProvider>
-                  <Navigation />
-                </BottomSheetModalProvider>
-              </GestureHandlerRootView>
-            </AppLoading>
-          </AuthProvider>
-        </QueryClientProvider>
-      </NotificationsProvider>
-    </NativeBaseProvider>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Provider store={store}>
+        <Navigator />
+      </Provider>
+      {/* TODO: turn app to light mode and test status bar */}
+      {}
+      <StatusBar style="light" />
+    </SafeAreaView>
   )
 }
-
-const styles = StyleSheet.create({
-  gestureHandlerRootView: {
-    flex: 1,
-  },
-})
-
-registerRootComponent(App)
 
 export default App
