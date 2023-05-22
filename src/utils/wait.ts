@@ -1,5 +1,5 @@
-export async function wait(timeMs = 5000): Promise<boolean> {
-  return await new Promise((resolve) => {
-    setTimeout(() => resolve(true), timeMs)
-  })
+export function wait(timeMs = 5000): Promise<boolean> {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(true), timeMs);
+  });
 }

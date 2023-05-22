@@ -1,6 +1,6 @@
+import FontIcon from '@expo/vector-icons/FontAwesome5';
 import React from 'react';
 import { type TextStyle } from 'react-native';
-import FontIcon from 'react-native-vector-icons/FontAwesome5';
 
 const HeaderLeft = ({
   icon,

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ActivityIndicator, Image, View } from 'react-native';
 
+import { Text } from '~/src/components/ui/text';
 import colors from '~/src/theme/colors';
 import { DIMENSIONS } from '~/src/utils/constants';
 
@@ -9,21 +10,14 @@ function Splash() {
     <View
       style={{
         flex: 1,
-        backgroundColor: colors.primary,
+        backgroundColor: colors.slate[500],
         alignItems: 'center',
         justifyContent: 'center',
       }}
     >
-      <Image
-        resizeMode="contain"
-        source={require('../../assets/images/logo-lg.png')}
-        style={{
-          width: DIMENSIONS.width * 0.4,
-          height: DIMENSIONS.width * 0.4,
-        }}
-      />
+      <Text>LOGO</Text>
       <ActivityIndicator
-        color={colors.white}
+        color={colors.common.white}
         size="large"
         style={{ marginTop: 50 }}
       />

@@ -1,7 +1,7 @@
+import { MaterialCommunityIcons as MCIcons } from '@expo/vector-icons';
 import { type IconProps } from '@rneui/themed';
 import React from 'react';
-import { Image, TouchableOpacity, View } from 'react-native';
-import FontIcon from 'react-native-vector-icons/FontAwesome5';
+import { TouchableOpacity, View } from 'react-native';
 
 import { Text } from '~/src/components/ui/text';
 import colors from '~/src/theme/colors';
@@ -15,13 +15,12 @@ export default function TabBar({
   navigation,
 }: BottomTabBarProps) {
   const routes = [...state.routes];
-  const activeColor = colors.primary;
+  const activeColor = colors.slate[500];
 
-  // TODO: REFACTOR THIS (TOO MUCH CODE DUPLICATION AND BAD PRACTICE)
   return (
     <View
       style={{
-        backgroundColor: colors.white,
+        backgroundColor: colors.common.white,
       }}
     >
       <View
@@ -64,43 +63,20 @@ export default function TabBar({
                 }}
               >
                 {options.tabBarBadge}
-                {typeof options.tabBarIcon === 'number' && (
-                  <Image
-                    source={options.tabBarIcon}
+
+                {options.tabBarIcon && (
+                  <MCIcons
+                    {...(options.tabBarIcon as IconProps)}
+                    name={
+                      options.tabBarIcon.name as keyof typeof MCIcons.glyphMap
+                    }
+                    color={isFocused ? activeColor : colors.slate[400]}
+                    size={24}
                     style={{
-                      tintColor: isFocused ? activeColor : colors.slate[400],
-                      width: 26,
-                      height: 26,
                       alignSelf: 'center',
                     }}
-                    resizeMode="stretch"
                   />
                 )}
-                {typeof options.tabBarIcon !== 'number' &&
-                  options.tabBarLabel === 'Settings' && (
-                    <FontIcon
-                      {...(options.tabBarIcon as IconProps)}
-                      name="cog"
-                      color={isFocused ? activeColor : colors.slate[400]}
-                      size={24}
-                      style={{
-                        alignSelf: 'center',
-                      }}
-                    />
-                  )}
-
-                {typeof options.tabBarIcon !== 'number' &&
-                  options.tabBarLabel === 'News' && (
-                    <FontIcon
-                      {...(options.tabBarIcon as IconProps)}
-                      name="list"
-                      color={isFocused ? activeColor : colors.slate[400]}
-                      size={24}
-                      style={{
-                        alignSelf: 'center',
-                      }}
-                    />
-                  )}
 
                 {options.tabBarBadge}
                 <Text

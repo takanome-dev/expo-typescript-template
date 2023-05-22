@@ -10,7 +10,7 @@ import { DIMENSIONS } from '~/src/utils/constants';
 
 const baseStyles = {
   buttonStyle: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.common.white,
     paddingHorizontal: 10,
     borderRadius: 10,
     height: 50,
@@ -18,7 +18,7 @@ const baseStyles = {
   },
   containerStyle: {
     alignSelf: 'center',
-    backgroundColor: colors.white,
+    backgroundColor: colors.common.white,
     borderRadius: 10,
   },
   titleStyle: {
@@ -26,7 +26,7 @@ const baseStyles = {
     fontWeight: '700',
     backgroundColor: 'transparent',
     textTransform: 'uppercase',
-    fontFamily: fonts.monserrat.bold,
+    // fontFamily: fonts.monserrat.bold,
     letterSpacing: 1.5,
   },
 } as const;
@@ -35,13 +35,13 @@ const buttonVariants = {
   primary: {
     buttonStyle: {
       borderWidth: 0,
-      backgroundColor: colors.primary,
+      backgroundColor: colors.slate[500],
     },
     containerStyle: {
-      backgroundColor: colors.primary,
+      backgroundColor: colors.slate[500],
     },
     titleStyle: {
-      color: colors.white,
+      color: colors.common.white,
     },
   },
   // secondary: {

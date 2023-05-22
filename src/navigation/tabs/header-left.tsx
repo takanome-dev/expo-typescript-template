@@ -1,6 +1,6 @@
+import FontIcon from '@expo/vector-icons/FontAwesome5';
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import FontIcon from 'react-native-vector-icons/FontAwesome5';
 
 const styles = StyleSheet.create({
   button: {

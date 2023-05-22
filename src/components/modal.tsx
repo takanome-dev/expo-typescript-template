@@ -1,12 +1,12 @@
 import { Icon } from '@rneui/themed';
-import React, { useState } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 import Modal from 'react-native-modal';
 
-import { Button } from '~/src/components/ui/button';
-import { Text } from '~/src/components/ui/text';
-import colors from '~/src/theme/colors';
+import { Button } from '~/components/ui/button';
+import { Text } from '~/components/ui/text';
 import { DIMENSIONS } from '~/src/utils/constants';
+import colors from '~/theme/colors';
 
 function ModalTester({
   visible,
@@ -29,7 +29,7 @@ function ModalTester({
       <View
         style={{
           height: 320,
-          backgroundColor: colors.white,
+          backgroundColor: colors.common.white,
           alignItems: 'center',
           borderRadius: 10,
         }}
@@ -49,7 +49,7 @@ function ModalTester({
             name="check"
             size={DIMENSIONS.width * 0.7 * 0.2}
             type="octicons"
-            color={colors.white}
+            color={colors.common.white}
           />
         </View>
         <Text
@@ -111,7 +111,7 @@ export const ConfirmDonationModal = ({
     <View
       style={{
         height: 320,
-        backgroundColor: colors.white,
+        backgroundColor: colors.common.white,
         alignItems: 'center',
         borderRadius: 10,
       }}
@@ -131,7 +131,7 @@ export const ConfirmDonationModal = ({
           name="check"
           size={DIMENSIONS.width * 0.7 * 0.2}
           type="octicons"
-          color={colors.white}
+          color={colors.common.white}
         />
       </View>
       <Text

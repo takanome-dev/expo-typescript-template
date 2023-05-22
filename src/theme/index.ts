@@ -1,5 +1,5 @@
-import colors from './colors'
-import fonts from './fonts'
+import colors from './colors';
+import fonts from './fonts';
 
 const fontSizes = {
   '2xs': 10,
@@ -12,37 +12,37 @@ const fontSizes = {
   '3xl': 28,
   '4xl': 32,
   '5xl': 40,
-} as const
+} as const;
 
-const scale = fontSizes.md
+const scale = fontSizes.md;
 
 export const space = {
   px: '1',
-  '0': 0,
-  '0.5': 0.125 * scale,
-  '1': 0.25 * scale,
-  '2': 0.5 * scale,
-  '3': 0.75 * scale,
-  '4': scale,
-  '5': 1.25 * scale,
-  '6': 1.5 * scale,
-  '7': 1.75 * scale,
-  '8': 2 * scale,
-  '9': 2.25 * scale,
-  '10': 2.5 * scale,
-  '12': 3 * scale,
-  '16': 4 * scale,
-  '20': 5 * scale,
-  '24': 6 * scale,
-  '32': 8 * scale,
-  '40': 10 * scale,
-  '48': 12 * scale,
-  '56': 14 * scale,
-  '64': 16 * scale,
-  '72': 18 * scale,
-  '80': 20 * scale,
-  '96': 24 * scale,
-} as const
+  0: 0,
+  0.5: 0.125 * scale,
+  1: 0.25 * scale,
+  2: 0.5 * scale,
+  3: 0.75 * scale,
+  4: scale,
+  5: 1.25 * scale,
+  6: 1.5 * scale,
+  7: 1.75 * scale,
+  8: 2 * scale,
+  9: 2.25 * scale,
+  10: 2.5 * scale,
+  12: 3 * scale,
+  16: 4 * scale,
+  20: 5 * scale,
+  24: 6 * scale,
+  32: 8 * scale,
+  40: 10 * scale,
+  48: 12 * scale,
+  56: 14 * scale,
+  64: 16 * scale,
+  72: 18 * scale,
+  80: 20 * scale,
+  96: 24 * scale,
+} as const;
 
 const theme = {
   colors,
@@ -56,6 +56,6 @@ const theme = {
       elevation: 3,
     },
   },
-}
+};
 
-export default theme
+export default theme;

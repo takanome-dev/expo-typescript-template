@@ -2,12 +2,14 @@ import FontIcon from '@expo/vector-icons/FontAwesome5';
 import React from 'react';
 import { ScrollView, View } from 'react-native';
 
-import { Input } from '~/src/components/ui/input';
-import { Text } from '~/src/components/ui/text';
-import { TouchableComponent } from '~/src/components/ui/touchable-component';
-import colors from '~/src/theme/colors';
+import { Input } from '~/components/ui/input';
+import { Text } from '~/components/ui/text';
+import { TouchableComponent } from '~/components/ui/touchable-component';
+import colors from '~/theme/colors';
 
-const News = ({ navigation }: NewsNavigationScreenProps<'News'>) => (
+const Activities = ({
+  navigation,
+}: ActivityNavigationScreenProps<'Activities'>) => (
   <ScrollView contentContainerStyle={{ padding: 20 }}>
     <View
       style={{
@@ -38,7 +40,9 @@ const News = ({ navigation }: NewsNavigationScreenProps<'News'>) => (
           }
         />
       </View>
-      <TouchableComponent onPress={() => navigation.navigate('NewsDetails')}>
+      <TouchableComponent
+        onPress={() => navigation.navigate('ActivitiesDetails')}
+      >
         <View
           style={{
             backgroundColor: colors.common.white,
@@ -57,11 +61,12 @@ const News = ({ navigation }: NewsNavigationScreenProps<'News'>) => (
               marginBottom: 10,
             }}
           >
-            News Card
+            Activity Card
           </Text>
         </View>
       </TouchableComponent>
     </View>
   </ScrollView>
 );
-export default News;
+
+export default Activities;

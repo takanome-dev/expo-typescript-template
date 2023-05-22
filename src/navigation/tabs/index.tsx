@@ -1,51 +1,34 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import FontIcon from '@expo/vector-icons/FontAwesome5';
 
-import {
-  HomeNavigator,
-  NewsNavigator,
-  ProfileNavigator,
-  SettingsNavigator,
-} from '~/navigator/stacks';
-import TabBar from '~/navigator/tabs/tab-bar';
+import TabBar from '~/navigation/tabs/tab-bar';
+import { ActivityNavigator } from '~/src/navigation/stacks/activities';
+import { NewsNavigator } from '~/src/navigation/stacks/news';
+import { ProfileNavigator } from '~/src/navigation/stacks/profile';
+import Home from '~/src/screens/home';
 import colors from '~/src/theme/colors';
-import { type BottomTabNavigationParamList } from '~/src/types';
 
 const Tab = createBottomTabNavigator<BottomTabNavigationParamList>();
 
 const TabNavigator = () => (
   <Tab.Navigator
-    // tabBar={(props) => <TabBar {...props} />}
+    tabBar={(props) => <TabBar {...props} />}
     screenOptions={() => ({
       unmountOnBlur: true,
-      headerTintColor: colors.white,
+      headerTintColor: colors.common.white,
       headerStyle: { backgroundColor: colors.slate[500] },
       headerTitleStyle: { fontSize: 18 },
-      tabBarIcon: ({ color, size }) => {
-        let iconName: keyof typeof Feather.glyphMap
-
-        if (route.name === 'HomeStack') {
-          iconName = 'home'
-        } else if (route.name === 'ExamplesStack') {
-          iconName = 'list'
-        } else {
-          iconName = 'alert-triangle'
-        }
-
-        // You can return any component that you like here!
-        return <FontIcon name={iconName} size={size} color={color} />
-      },
     })}
-    initialRouteName="HomeStack"
+    initialRouteName="Home"
   >
     <Tab.Screen
-      name="HomeStack"
-      component={HomeNavigator}
+      name="Home"
+      component={Home}
       options={() => ({
-        title: '',
-        tabBarIcon: require('../../../assets/icons/home.png'),
         tabBarLabel: 'Home',
+        tabBarIcon: {
+          name: 'home',
+        } as any,
         headerShown: false,
       })}
     />
@@ -54,17 +37,23 @@ const TabNavigator = () => (
       component={NewsNavigator}
       options={{
         tabBarLabel: 'News',
+        tabBarIcon: {
+          name: 'newspaper',
+        } as any,
         headerShown: false,
       }}
     />
     <Tab.Screen
-      name="SettingsStack"
-      component={SettingsNavigator}
+      name="ActivitiesStack"
+      component={ActivityNavigator}
       options={{
-        title: 'Settings',
-        tabBarLabel: 'Settings',
-        headerStyle: { backgroundColor: colors.primary },
-        headerTintColor: colors.white,
+        title: 'Activities',
+        tabBarLabel: 'Activities',
+        tabBarIcon: {
+          name: 'calendar',
+        } as any,
+        headerStyle: { backgroundColor: colors.slate[500] },
+        headerTintColor: colors.common.white,
         headerTitleStyle: { fontSize: 18 },
         headerShown: false,
       }}
@@ -73,8 +62,8 @@ const TabNavigator = () => (
       name="ProfileStack"
       component={ProfileNavigator}
       options={{
-        tabBarIcon: require('../../../assets/icons/profile.png'),
         tabBarLabel: 'Profile',
+        tabBarIcon: { name: 'account' } as any,
         headerShown: false,
       }}
     />

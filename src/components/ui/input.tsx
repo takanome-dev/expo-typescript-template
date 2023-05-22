@@ -24,7 +24,7 @@ export const Input = React.forwardRef(
       inputStyle,
       inputContainerStyle,
       containerStyle,
-      placeholderTextColor = colors.white,
+      placeholderTextColor = colors.common.white,
       editable = true,
       enableShowPassword = false,
       rightIcon,
@@ -82,7 +82,7 @@ export const Input = React.forwardRef(
             borderRadius: 5,
             minHeight: 48,
             borderWidth: 1,
-            borderColor: colors.white,
+            borderColor: colors.slate[300],
           },
           inputContainerStyle,
         ]}
@@ -92,7 +92,7 @@ export const Input = React.forwardRef(
             fontSize: RFValue(14, DIMENSIONS.height),
             fontWeight: '600',
             fontFamily: fonts.monserrat.semibold,
-            color: colors.slate[50],
+            color: colors.slate[600],
           },
           inputStyle,
         ]}
@@ -110,5 +110,5 @@ export const Input = React.forwardRef(
         ]}
       />
     );
-  },
+  }
 );
