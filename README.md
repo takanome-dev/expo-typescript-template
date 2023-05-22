@@ -4,28 +4,18 @@ This is a typescript template for expo. It includes all the necessary stuff to s
 
 ## 🚀 Setup
 
-Clone the project
-
 ```bash
-  git clone https://github.com/takanome-dev/expo-typescript-template.git
-```
+# Clone the project
+git clone https://github.com/takanome-dev/expo-typescript-template.git
 
-Go to the project directory
+# Go to the project directory
+cd expo-typescript-template
 
-```bash
-  cd expo-typescript-template
-```
+# Install dependencies
+yarn install # or npm install
 
-Install dependencies
-
-```bash
-  yarn install # or npm install
-```
-
-Start the expo server
-
-```bash
-  yarn start
+# Start the expo server
+yarn start
 ```
 
 ## Libraries
