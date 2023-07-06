@@ -47,19 +47,19 @@
   integrity sha512-29tfsWTq2Ftu7MXmimyC0C5FDZv5DYxOZkh3XD3+QW4V/BYuv/LyEsjj3c0hqedEaDt6DBfDvexMKU8YevdqFg==
 
 "@babel/core@^7.11.6", "@babel/core@^7.12.3", "@babel/core@^7.13.16", "@babel/core@^7.19.6", "@babel/core@^7.20.0":
-  version "7.22.6"
-  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.22.6.tgz#aafafbe86e9a1679d876b99dc46382964ef72494"
-  integrity sha512-HPIyDa6n+HKw5dEuway3vVAhBboYCtREBMp+IWeseZy6TFtzn6MHkCH2KKYUOC/vKKwgSMHQW4htBOrmuRPXfw==
+  version "7.22.8"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.22.8.tgz#386470abe884302db9c82e8e5e87be9e46c86785"
+  integrity sha512-75+KxFB4CZqYRXjx4NlR4J7yGvKumBuZTmV4NV6v09dVXXkuYVYLT68N6HCzLvfJ+fWCxQsntNzKwwIXL4bHnw==
   dependencies:
     "@ampproject/remapping" "^2.2.0"
     "@babel/code-frame" "^7.22.5"
-    "@babel/generator" "^7.22.5"
+    "@babel/generator" "^7.22.7"
     "@babel/helper-compilation-targets" "^7.22.6"
     "@babel/helper-module-transforms" "^7.22.5"
     "@babel/helpers" "^7.22.6"
-    "@babel/parser" "^7.22.6"
+    "@babel/parser" "^7.22.7"
     "@babel/template" "^7.22.5"
-    "@babel/traverse" "^7.22.6"
+    "@babel/traverse" "^7.22.8"
     "@babel/types" "^7.22.5"
     "@nicolo-ribaudo/semver-v6" "^6.3.3"
     convert-source-map "^1.7.0"
@@ -68,9 +68,9 @@
     json5 "^2.2.2"
 
 "@babel/eslint-parser@^7.21.8":
-  version "7.22.6"
-  resolved "https://registry.yarnpkg.com/@babel/eslint-parser/-/eslint-parser-7.22.6.tgz#fa75b578a6392d92243eb8fb9c4e7ece8ad7c583"
-  integrity sha512-KAom7E7d6bAh5/PflF3luynWlDLOIqfX+ZJcL0LRs6/6rtXJmJxPiWuIGfxNPtcWdtQ5lSSJbKbQlz/c/R60Ng==
+  version "7.22.7"
+  resolved "https://registry.yarnpkg.com/@babel/eslint-parser/-/eslint-parser-7.22.7.tgz#d2807fbd1fa4376162716da63dfd3c69a2249fed"
+  integrity sha512-LH6HJqjOyu/Qtp7LuSycZXK/CYXQ4ohdkliEaL1QTdtOXVdOVpTBKVxAo/+eeyt+x/2SRzB+zUPduVl+xiEvdg==
   dependencies:
     "@nicolo-ribaudo/eslint-scope-5-internals" "5.1.1-v1"
     "@nicolo-ribaudo/semver-v6" "^6.3.3"
@@ -96,10 +96,10 @@
     "@jridgewell/trace-mapping" "^0.3.17"
     jsesc "^2.5.1"
 
-"@babel/generator@^7.22.5":
-  version "7.22.5"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.22.5.tgz#1e7bf768688acfb05cf30b2369ef855e82d984f7"
-  integrity sha512-+lcUbnTRhd0jOewtFSedLyiPsD5tswKkbgcezOqqWFUVNEwoUTlpPOBmvhG7OXWLR4jMdv0czPGH5XbflnD1EA==
+"@babel/generator@^7.22.7":
+  version "7.22.7"
+  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.22.7.tgz#a6b8152d5a621893f2c9dacf9a4e286d520633d5"
+  integrity sha512-p+jPjMG+SI8yvIaxGgeW24u7q9+5+TGpZh8/CuB7RhBKd7RCy8FayNEFNNKrNK/eUcY/4ExQqLmyrvBXKsIcwQ==
   dependencies:
     "@babel/types" "^7.22.5"
     "@jridgewell/gen-mapping" "^0.3.2"
@@ -336,15 +336,10 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.22.4.tgz#a770e98fd785c231af9d93f6459d36770993fb32"
   integrity sha512-VLLsx06XkEYqBtE5YGPwfSGwfrjnyPP5oiGty3S8pQLFDFLaS8VwWSIxkTXpcvr5zeYLE6+MBNl2npl/YnfofA==
 
-"@babel/parser@^7.21.9":
+"@babel/parser@^7.21.9", "@babel/parser@^7.22.5", "@babel/parser@^7.22.7":
   version "7.22.7"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.22.7.tgz#df8cf085ce92ddbdbf668a7f186ce848c9036cae"
   integrity sha512-7NF8pOkHP5o2vpmGgNGcfAeCvOYhGLyA3Z4eBQkT1RJlWu47n63bCs93QfJ2hIAFCil7L5P2IWhs1oToVgrL0Q==
-
-"@babel/parser@^7.22.5", "@babel/parser@^7.22.6":
-  version "7.22.6"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.22.6.tgz#201f8b47be20c76c7c5743b9c16129760bf9a975"
-  integrity sha512-EIQu22vNkceq3LbjAq7knDf/UmtI2qbcNI8GRBlijez6TpQLvSodJPYfydQmNA5buwkxxxa/PVI44jjYZ+/cLw==
 
 "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@^7.22.5":
   version "7.22.5"
@@ -1369,18 +1364,18 @@
     debug "^4.1.0"
     globals "^11.1.0"
 
-"@babel/traverse@^7.22.5", "@babel/traverse@^7.22.6":
-  version "7.22.6"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.22.6.tgz#8f2f83a5c588251584914debeee38f35f661a300"
-  integrity sha512-53CijMvKlLIDlOTrdWiHileRddlIiwUIyCKqYa7lYnnPldXCG5dUSN38uT0cA6i7rHWNKJLH0VU/Kxdr1GzB3w==
+"@babel/traverse@^7.22.5", "@babel/traverse@^7.22.6", "@babel/traverse@^7.22.8":
+  version "7.22.8"
+  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.22.8.tgz#4d4451d31bc34efeae01eac222b514a77aa4000e"
+  integrity sha512-y6LPR+wpM2I3qJrsheCTwhIinzkETbplIgPBbwvqPKc+uljeA5gP+3nP8irdYt1mjQaDnlIcG+dw8OjAco4GXw==
   dependencies:
     "@babel/code-frame" "^7.22.5"
-    "@babel/generator" "^7.22.5"
+    "@babel/generator" "^7.22.7"
     "@babel/helper-environment-visitor" "^7.22.5"
     "@babel/helper-function-name" "^7.22.5"
     "@babel/helper-hoist-variables" "^7.22.5"
     "@babel/helper-split-export-declaration" "^7.22.6"
-    "@babel/parser" "^7.22.6"
+    "@babel/parser" "^7.22.7"
     "@babel/types" "^7.22.5"
     debug "^4.1.0"
     globals "^11.1.0"
@@ -4276,9 +4271,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.431:
-  version "1.4.449"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.449.tgz#79ffe4514c81c35d4eb13030a63ff3383a8cc655"
-  integrity sha512-TxLRpRUj/107ATefeP8VIUWNOv90xJxZZbCW/eIbSZQiuiFANCx2b7u+GbVc9X4gU+xnbvypNMYVM/WArE1DNQ==
+  version "1.4.451"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.451.tgz#12b63ee5c82cbbc7b4ddd91e90f5a0dfc10de26e"
+  integrity sha512-YYbXHIBxAHe3KWvGOJOuWa6f3tgow44rBW+QAuwVp2DvGqNZeE//K2MowNdWS7XE8li5cgQDrX1LdBr41LufkA==
 
 emittery@^0.13.1:
   version "0.13.1"
