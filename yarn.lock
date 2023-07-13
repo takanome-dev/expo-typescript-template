@@ -4374,9 +4374,9 @@ errorhandler@^1.5.1:
     escape-html "~1.0.3"
 
 es-abstract@^1.19.0, es-abstract@^1.20.4:
-  version "1.21.2"
-  resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.21.2.tgz#a56b9695322c8a185dc25975aa3b8ec31d0e7eff"
-  integrity sha512-y/B5POM2iBnIxCiernH1G7rC9qQoM77lLIMQLuob0zhp8C56Po81+2Nj0WFKnd0pNReDTnkYryc+zhOzpEIROg==
+  version "1.21.3"
+  resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.21.3.tgz#8aaa0ffc080e8a6fef6ace72631dc1ec5d47bf94"
+  integrity sha512-ZU4miiY1j3sGPFLJ34VJXEqhpmL+HGByCinGHv4HC+Fxl2fI2Z4yR6tl0mORnDr6PA8eihWo4LmSWDbvhALckg==
   dependencies:
     array-buffer-byte-length "^1.0.0"
     available-typed-arrays "^1.0.5"
@@ -4384,7 +4384,7 @@ es-abstract@^1.19.0, es-abstract@^1.20.4:
     es-set-tostringtag "^2.0.1"
     es-to-primitive "^1.2.1"
     function.prototype.name "^1.1.5"
-    get-intrinsic "^1.2.0"
+    get-intrinsic "^1.2.1"
     get-symbol-description "^1.0.0"
     globalthis "^1.0.3"
     gopd "^1.0.1"
@@ -4404,14 +4404,15 @@ es-abstract@^1.19.0, es-abstract@^1.20.4:
     object-inspect "^1.12.3"
     object-keys "^1.1.1"
     object.assign "^4.1.4"
-    regexp.prototype.flags "^1.4.3"
+    regexp.prototype.flags "^1.5.0"
     safe-regex-test "^1.0.0"
     string.prototype.trim "^1.2.7"
     string.prototype.trimend "^1.0.6"
     string.prototype.trimstart "^1.0.6"
+    typed-array-byte-offset "^1.0.0"
     typed-array-length "^1.0.4"
     unbox-primitive "^1.0.2"
-    which-typed-array "^1.1.9"
+    which-typed-array "^1.1.10"
 
 es-get-iterator@^1.1.3:
   version "1.1.3"
@@ -4501,9 +4502,9 @@ eslint-config-airbnb-base@^15.0.0:
     semver "^6.3.0"
 
 eslint-config-airbnb-typescript@^17.0.0:
-  version "17.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-typescript/-/eslint-config-airbnb-typescript-17.0.0.tgz#360dbcf810b26bbcf2ff716198465775f1c49a07"
-  integrity sha512-elNiuzD0kPAPTXjFWg+lE24nMdHMtuxgYoD30OyMD6yrW1AhFZPAg27VX7d3tzOErw+dgJTNWfRSDqEcXb4V0g==
+  version "17.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-typescript/-/eslint-config-airbnb-typescript-17.1.0.tgz#fda960eee4a510f092a9a1c139035ac588937ddc"
+  integrity sha512-GPxI5URre6dDpJ0CtcthSZVBAfI+Uw7un5OYNVxP2EYi3H81Jw701yFP7AU+/vCE7xBtFmjge7kfhhk4+RAiig==
   dependencies:
     eslint-config-airbnb-base "^15.0.0"
 
@@ -5355,7 +5356,7 @@ get-caller-file@^2.0.1, get-caller-file@^2.0.5:
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
   integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
 
-get-intrinsic@^1.0.2, get-intrinsic@^1.1.1, get-intrinsic@^1.1.3, get-intrinsic@^1.2.0:
+get-intrinsic@^1.0.2, get-intrinsic@^1.1.1, get-intrinsic@^1.1.3, get-intrinsic@^1.2.0, get-intrinsic@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/get-intrinsic/-/get-intrinsic-1.2.1.tgz#d295644fed4505fc9cde952c37ee12b477a83d82"
   integrity sha512-2DcsyfABl+gVHEfCOaTrWgyt+tb6MSEGmKq+kI5HwLbIYgjgmMcV8KQ41uaKz1xxUcn9tJtgFbQUEVcEbd0FYw==
@@ -9266,6 +9267,17 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
+typed-array-byte-offset@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/typed-array-byte-offset/-/typed-array-byte-offset-1.0.0.tgz#cbbe89b51fdef9cd6aaf07ad4707340abbc4ea0b"
+  integrity sha512-RD97prjEt9EL8YgAgpOkf3O4IF9lhJFr9g0htQkm0rchFp/Vx7LW5Q8fSXXub7BXAODyUQohRMyOc3faCPd0hg==
+  dependencies:
+    available-typed-arrays "^1.0.5"
+    call-bind "^1.0.2"
+    for-each "^0.3.3"
+    has-proto "^1.0.1"
+    is-typed-array "^1.1.10"
+
 typed-array-length@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/typed-array-length/-/typed-array-length-1.0.4.tgz#89d83785e5c4098bec72e08b319651f0eac9c1bb"
@@ -9564,10 +9576,10 @@ which-module@^2.0.0:
   resolved "https://registry.yarnpkg.com/which-module/-/which-module-2.0.1.tgz#776b1fe35d90aebe99e8ac15eb24093389a4a409"
   integrity sha512-iBdZ57RDvnOR9AGBhML2vFZf7h8vmBjhoaZqODJBFWHVtKkDmKuHai3cx5PgVMrX5YDNp27AofYbAwctSS+vhQ==
 
-which-typed-array@^1.1.9:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/which-typed-array/-/which-typed-array-1.1.9.tgz#307cf898025848cf995e795e8423c7f337efbde6"
-  integrity sha512-w9c4xkx6mPidwp7180ckYWfMmvxpjlZuIudNtDf4N/tTAUB8VJbX25qZoAsrtGuYNnGw3pa0AXgbGKRB8/EceA==
+which-typed-array@^1.1.10, which-typed-array@^1.1.9:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/which-typed-array/-/which-typed-array-1.1.10.tgz#74baa2789991905c2076abb317103b866c64e69e"
+  integrity sha512-uxoA5vLUfRPdjCuJ1h5LlYdmTLbYfums398v3WLkM+i/Wltl2/XyZpQWKbN++ck5L64SR/grOHqtXCUKmlZPNA==
   dependencies:
     available-typed-arrays "^1.0.5"
     call-bind "^1.0.2"
